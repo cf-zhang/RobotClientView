@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>image/wifi0.png</file>
+        <file>image/wifi1.png</file>
+        <file>image/wifi2.png</file>
+        <file>image/wifi3.png</file>
+        <file>image/wifi4.png</file>
+        <file>image/wifi-gray.png</file>
+        <file>image/timg.png</file>
+        <file>image/settings.png</file>
+    </qresource>
+</RCC>
