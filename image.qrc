@@ -8,5 +8,11 @@
         <file>image/wifi-gray.png</file>
         <file>image/timg.png</file>
         <file>image/settings.png</file>
+        <file>gifs/start.gif</file>
+        <file>gifs/start1.gif</file>
+        <file>gifs/start2.gif</file>
+        <file>gifs/start3.gif</file>
+        <file>gifs/start4.gif</file>
+        <file>gifs/start5.gif</file>
     </qresource>
 </RCC>

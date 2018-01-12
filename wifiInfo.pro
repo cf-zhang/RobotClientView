@@ -32,7 +32,8 @@ SOURCES += \
     topbarwidget.cpp \
     mainwidget.cpp \
     splittermanager.cpp \
-    settingbutton.cpp
+    settingbutton.cpp \
+    customsplash.cpp
 
 HEADERS += \
     wifi_scan.h \
@@ -41,7 +42,8 @@ HEADERS += \
     topbarwidget.h \
     mainwidget.h \
     splittermanager.h \
-    settingbutton.h
+    settingbutton.h \
+    customsplash.h
 
 RESOURCES += \
     image.qrc

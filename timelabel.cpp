@@ -16,7 +16,7 @@ TimeLabel::TimeLabel(QWidget *parent):QLabel(parent){
     //timer for periodically update the wifi signal strenth
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(onTimeout()));
-    timer->start(60000);//min /
+    timer->start(1000);//min /
 }
 
 TimeLabel::~TimeLabel(){

@@ -12,7 +12,7 @@ SettingButton::SettingButton(QWidget *parent):QPushButton(parent){
 
     settingMenu = new QMenu;
     settingMenu->setFont(font);
-    settingMenu->setFixedSize(150,500);
+    settingMenu->setFixedSize(200,500);
     settingMenu->setStyleSheet(
                 " QMenu {\
                 background-color: white; /* sets background of the menu 设置整个菜单区域的背景色，我用的是白色：white*/\
@@ -33,7 +33,7 @@ SettingButton::SettingButton(QWidget *parent):QPushButton(parent){
     aboutDevice = new QAction("关于本机",this);
 
     settingMenu->addAction(aboutDevice);
-
+//    settingMenu->addSeparator();
     setMenu(settingMenu);
 
     setStyleSheet("QPushButton::menu-indicator{image:none}");
