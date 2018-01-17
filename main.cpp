@@ -12,13 +12,13 @@ int main(int argc, char *argv[])
 
 
 
-    CustomSplash cs;
-    cs.startSplash();
-    QTime t;
-    t.start();
-    while(t.elapsed()<10000)
-        QCoreApplication::processEvents();
-    cs.stopSplash();
+//    CustomSplash cs;
+//    cs.startSplash();
+//    QTime t;
+//    t.start();
+//    while(t.elapsed()<10000)
+//        QCoreApplication::processEvents();
+//    cs.stopSplash();
     SplitterManager sm;
 
     return a.exec();

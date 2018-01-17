@@ -1,9 +1,10 @@
 #ifndef TOPBARWIDGET_H
 #define TOPBARWIDGET_H
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QWidget>
 #include "wifilabel.h"
 #include "timelabel.h"
+#include "batterylabel.h"
 #include "settingbutton.h"
 class TopBarWidget : public QWidget
 {
@@ -15,9 +16,10 @@ signals:
 
 public slots:
 private:
-    QHBoxLayout *layout;
+    QVBoxLayout *layout;
     WifiLabel *wifilabel;
     TimeLabel *timelabel;
+    BatteryLabel *batterlabel;
     SettingButton *settingbutton;
 };
 

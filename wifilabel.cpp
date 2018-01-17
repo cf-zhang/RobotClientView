@@ -5,10 +5,10 @@
 
 WifiLabel::WifiLabel(QString wifiname, QWidget *parent) : QLabel(parent),wifiName(wifiname){
 //    resize(40,40);
-    setFixedSize(40,40);
+    setFixedSize(100,100);
     //set the initial wifi strenth image
     img = new QImage();
-    if(img->load(":/image/wifi-gray.png"))
+    if(img->load(":/image/wifi0.png"))
     {
 //        qDebug()<<img->width()<<" "<<img->height();
         setPixmap(QPixmap::fromImage(img->scaled(size())));
@@ -31,7 +31,7 @@ WifiLabel::~WifiLabel(){
 //timer event for periodically get wifi signal strenth and
 //change the image for the wifi lable. rate 1Hz
 void WifiLabel::onTimeout(){
-    QString qrc = QString(":/image/wifi-gray.png");
+    QString qrc = QString(":/image/wifi0.png");
     int status;
     status = wifi_scan_station(wifi, &station);
     if(0 < status){

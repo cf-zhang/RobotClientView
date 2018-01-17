@@ -1,18 +1,25 @@
 <RCC>
     <qresource prefix="/">
+        <file>image/arrow1.png</file>
+        <file>image/arrow2.png</file>
+        <file>image/arrow3.png</file>
+        <file>image/battery5.png</file>
+        <file>image/battery10.png</file>
+        <file>image/battery20.png</file>
+        <file>image/battery30.png</file>
+        <file>image/battery40.png</file>
+        <file>image/battery50.png</file>
+        <file>image/battery60.png</file>
+        <file>image/battery70.png</file>
+        <file>image/battery80.png</file>
+        <file>image/battery90.png</file>
+        <file>image/battery100.png</file>
+        <file>image/setting.png</file>
         <file>image/wifi0.png</file>
         <file>image/wifi1.png</file>
         <file>image/wifi2.png</file>
         <file>image/wifi3.png</file>
         <file>image/wifi4.png</file>
-        <file>image/wifi-gray.png</file>
-        <file>image/timg.png</file>
-        <file>image/settings.png</file>
-        <file>gifs/start.gif</file>
-        <file>gifs/start1.gif</file>
-        <file>gifs/start2.gif</file>
-        <file>gifs/start3.gif</file>
-        <file>gifs/start4.gif</file>
-        <file>gifs/start5.gif</file>
+        <file>image/batteryerror.png</file>
     </qresource>
 </RCC>

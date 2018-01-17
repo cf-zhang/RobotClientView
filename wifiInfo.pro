@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui dbus
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -33,7 +33,12 @@ SOURCES += \
     mainwidget.cpp \
     splittermanager.cpp \
     settingbutton.cpp \
-    customsplash.cpp
+    customsplash.cpp \
+    aboutthis.cpp \
+    batterylabel.cpp \
+    viewlabel.cpp \
+    controlbuttonandlabel.cpp \
+    buttoncallback.cpp
 
 HEADERS += \
     wifi_scan.h \
@@ -43,7 +48,13 @@ HEADERS += \
     mainwidget.h \
     splittermanager.h \
     settingbutton.h \
-    customsplash.h
+    customsplash.h \
+    power.h \
+    aboutthis.h \
+    batterylabel.h \
+    viewlabel.h \
+    controlbuttonandlabel.h \
+    buttoncallback.h
 
 RESOURCES += \
     image.qrc

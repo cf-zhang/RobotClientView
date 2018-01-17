@@ -1,18 +1,23 @@
 #include "settingbutton.h"
+
+#include "power.h"
+#include <QPalette>
 #include <QFont>
-
+#include <QDebug>
 SettingButton::SettingButton(QWidget *parent):QPushButton(parent){
-    setFixedSize(40,40);
-    setIconSize(QSize(40, 40));
+    setAutoFillBackground(true);
+    setFixedSize(100,100);
+    setIconSize(QSize(100, 100));
+    setIcon(QIcon(":/image/setting.png"));
 
-    setIcon(QIcon(":/image/settings.png"));
-
-    QFont font("Microsoft YaHei", 20, QFont::Black);
+    setStyleSheet("background-color: rgb(37, 109, 167);");
 
 
+    QFont font("Microsoft YaHei", 14, QFont::Black);
     settingMenu = new QMenu;
     settingMenu->setFont(font);
-    settingMenu->setFixedSize(200,500);
+    settingMenu->setFixedWidth(parent->width()-10);
+
     settingMenu->setStyleSheet(
                 " QMenu {\
                 background-color: white; /* sets background of the menu 设置整个菜单区域的背景色，我用的是白色：white*/\
@@ -30,20 +35,45 @@ SettingButton::SettingButton(QWidget *parent):QPushButton(parent){
                     background-color: #2dabf9;/*这一句是设置菜单项鼠标经过选中的样式*/\
                 }");
     //add items to menu
-    aboutDevice = new QAction("关于本机",this);
+    aboutDev = new QAction("关于本机",this);
+    restartDev = new QAction("重启",this);
+    shutdownDev = new QAction("关机",this);
 
-    settingMenu->addAction(aboutDevice);
+    settingMenu->addAction(aboutDev);
+    settingMenu->addAction(restartDev);
+    settingMenu->addAction(shutdownDev);
 //    settingMenu->addSeparator();
+    setFixedWidth(parent->width());
     setMenu(settingMenu);
 
-    setStyleSheet("QPushButton::menu-indicator{image:none}");
-    setStyleSheet("background:transparent");
-
+    connect(aboutDev, SIGNAL(triggered(bool)), this, SLOT(aboutDevice()));
+    connect(shutdownDev, SIGNAL(triggered(bool)), this, SLOT(shutDownDevice()));
+    connect(restartDev, SIGNAL(triggered(bool)), this, SLOT(restartDevice()));
 }
 
 SettingButton::~SettingButton(){
-    delete aboutDevice;
-
+    delete aboutDev;
+    delete restartDev;
+    delete shutdownDev;
     delete settingMenu;
 }
 
+void SettingButton::aboutDevice(){
+    AboutThis about;
+
+    about.exec();
+}
+
+
+void SettingButton::shutDownDevice(){
+//    qDebug()<<"in shutdown device\n";
+    Power::automatic = true;
+    Power::shutdown();
+}
+
+
+void SettingButton::restartDevice(){
+//    qDebug()<<"in restart device\n";
+    Power::automatic = true;
+    Power::reboot();
+}
