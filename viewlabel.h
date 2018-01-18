@@ -1,6 +1,6 @@
 #ifndef VIEWLABEL_H
 #define VIEWLABEL_H
-
+#include <QString>
 #include <QLabel>
 class ViewLabel :public QLabel
 {
@@ -8,6 +8,7 @@ class ViewLabel :public QLabel
 public:
     ViewLabel(QWidget *parent = nullptr);
     virtual ~ViewLabel();
+    void setBackgroundPixmap(QString qrc);
 private:
 
 signals:

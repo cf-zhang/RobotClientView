@@ -21,5 +21,15 @@
         <file>image/wifi3.png</file>
         <file>image/wifi4.png</file>
         <file>image/batteryerror.png</file>
+        <file>image/background.png</file>
+        <file>image/tracking.png</file>
+        <file>image/backtopackage.png</file>
+        <file>image/backtopackagebuffer.png</file>
+        <file>image/lostman.png</file>
+        <file>image/lowwarning5.png</file>
+        <file>image/lowwarning20.png</file>
+        <file>image/standby.png</file>
+        <file>image/systemerror.png</file>
+        <file>image/waitforman.png</file>
     </qresource>
 </RCC>

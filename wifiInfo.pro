@@ -37,7 +37,7 @@ SOURCES += \
     aboutthis.cpp \
     batterylabel.cpp \
     viewlabel.cpp \
-    controlbuttonandlabel.cpp
+    controlbutton.cpp
 
 HEADERS += \
     wifi_scan.h \
@@ -52,7 +52,7 @@ HEADERS += \
     aboutthis.h \
     batterylabel.h \
     viewlabel.h \
-    controlbuttonandlabel.h
+    controlbutton.h
 
 RESOURCES += \
     image.qrc
